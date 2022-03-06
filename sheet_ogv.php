@@ -55,7 +55,7 @@ function append($values, $entity){
 
     //Append to entity sheet (or other)
     $result = $sheet_service->spreadsheets_values->append($spreadsheetId, $range, $body, $params);
-    if($result->getUpdates()->getUpdatedCells() == 10){
+    if($result->getUpdates()->getUpdatedCells() == 6){
         return true;
     }
 
