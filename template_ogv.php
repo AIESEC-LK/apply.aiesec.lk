@@ -186,42 +186,10 @@ width:100%; height:100%; z-index:999; text-align: center; vertical-align: middle
                                 <input class="input--style-4" type="tel" placeholder="07xxxxxxxx" name="phone" pattern="[0][0-9]{9}" required>
                             </div>
                         </div>
-                        
-		          <div class="input-group col-2">
-		            <label class="label">University/School/Institute</label>
-		            <div class="rs-select2 js-select-simple select">
-		                <select id="institute_select" name="institute" value="">
-		                    <option disabled="disabled" selected="selected" hidden>Choose option</option>
-		                    <?= file_get_contents("https://aiesec.lk/sign-upform/alignments.txt"); ?>
-		                </select>
-		                <div class="select-dropdown"></div>
-		            </div>
-		        </div>
-
-                        <div class="input-group col-2">
-                            <label class="label">Educational Qualification<span class="required_field"> *</span></label>
-                            <div class="rs-select2 js-select-simple select--no-search">
-                                <select name="education" value="" required>
-                                    <option disabled="disabled" selected="selected" hidden>Choose option</option>
-                                    <option value="Undergraduate">Undergraduate</option>
-                                    <option value="Bachelor's Degree">Graduate (Bachelor's Degree)</option>
-                                    <option value="Master's Degree">Graduate (Master's Degree)</option>
-                                    <option value="Other">Other</option>
-                                </select>
-                                <div class="select-dropdown"></div>
-                            </div>
-                        </div>
-
-                        <div class="input-group col-2">
-                            <div class="input-group">
-                                <label class="label">Upload your CV</label>
-                                <input id="cv" class="input--style-4" type="file" name="cv" accept=".pdf">
-                            </div>
-                        </div>
-
+ 
 
                     </div>
-                    <div class="input-group">
+                    <div class="input-group"> 
 
                         <div class="row row-space" >
                             <div class="input-group ">
@@ -280,7 +248,7 @@ width:100%; height:100%; z-index:999; text-align: center; vertical-align: middle
 
 
             $.ajax({
-                url: 'signup.php',
+                url: 'signup_ogv.php',
                 type: 'POST',
                 data: formData,
                 success: function (data) {
