@@ -46,45 +46,32 @@
      'remoteip' => $_SERVER['REMOTE_ADDR']
  );
 
-    $curlConfig = array(
-        CURLOPT_URL => $url,
-        CURLOPT_POST => true,
-        CURLOPT_RETURNTRANSFER => true,
-        CURLOPT_POSTFIELDS => $data
-    );
+$curlConfig = array(
+    CURLOPT_URL => $url,
+    CURLOPT_POST => true,
+    CURLOPT_RETURNTRANSFER => true,
+    CURLOPT_POSTFIELDS => $data
+);
 
+$curl = curl_init();
+curl_setopt_array($curl, $curlConfig);
+$response = curl_exec($curl);
+curl_close($curl);
 
-    $curl = curl_init();
-    curl_setopt_array($curl, $curlConfig);
-    $response = curl_exec($curl);
-    curl_close($curl);
+$response = json_decode($response, true);
 
-    $response = json_decode($response, true);
+$date = new DateTime("now", new DateTimeZone('Asia/Colombo') );
+$timestamp = $date->format('Y-m-d H:i:s');
 
-    $date = new DateTime("now", new DateTimeZone('Asia/Colombo') );
-    $timestamp = $date->format('Y-m-d H:i:s');
+    $url = "Not provided";
+$res = append([[$timestamp, $first_name, $last_name, $email, $phone, $track]], $entity);
 
-     $url = "Not provided";
-//     if (isset($cv)){
-//         $url = upload($cv, $first_name, $last_name, $entity, $timestamp);
-//     }
- //   print([[$timestamp, $product, $first_name, $last_name, $email, $phone, $url, $track]]);
-    $res = append([[$timestamp, $first_name, $last_name, $email, $phone, $track]], $entity);
-
-    if ($res) {
-        $output = json_encode(array('type' => 'success', 'text' => "Details successfully submitted."));
-        die($output);
-    } else{
-        $output = json_encode(array('type' => 'fail', 'text' => "An unknown error occurred."));
-        die($output);
-    }
-
-
-
-
-
-
-
-
+if ($res) {
+    $output = json_encode(array('type' => 'success', 'text' => "Details successfully submitted."));
+    die($output);
+} else{
+    $output = json_encode(array('type' => 'fail', 'text' => "An unknown error occurred."));
+    die($output);
+}
 
 ?>

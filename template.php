@@ -10,10 +10,7 @@ if (isset($_GET['track'])){
     $track = $_GET['track'];
 }
 
-$base = "https://aiesec.lk/linkedin/";
-if ($_SERVER['SERVER_NAME'] == "localhost"){
-    $base = "https://localhost/aiesec.lk/linkedin/";
-}
+include_once "base.php";
 
 ?>
 <!DOCTYPE html>
