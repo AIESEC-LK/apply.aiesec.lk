@@ -197,7 +197,7 @@ width:100%; height:100%; z-index:999; text-align: center; vertical-align: middle
                             <label class="label">Country Interested In <span class="required_field"> *</span></label>
                             <div class="rs-select2 js-select-simple select--no-search form-group">
                                 <div class="form-group">
-                                    <select id="countries" name="countries" multiple >
+                                    <select id="countries" name="countries[]" multiple >
                                         <option value="India">India</option>
                                         <option value="Turkey">Turkey</option>
                                         <option value="Tunisia">Tunisia</option>

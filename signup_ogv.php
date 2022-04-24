@@ -34,7 +34,10 @@
  $last_name = $_POST['last_name'];
  $email = $_POST['email'];
  $phone = $_POST['phone'];
- $countries = $_POST['countries'];
+ $countries = '';
+ foreach($_POST['countries'] as $country){
+     $countries .= $country . ',';
+ }
 
  $entity = $_POST['entity'];
  $track = $_POST['track'];
@@ -66,7 +69,7 @@ $date = new DateTime("now", new DateTimeZone('Asia/Colombo') );
 $timestamp = $date->format('Y-m-d H:i:s');
 
     $url = "Not provided";
-$res = append([[$timestamp, $first_name, $last_name, $email, $phone,implode(" ", $countries), $track]], $entity);
+$res = append([[$timestamp, $first_name, $last_name, $email, $phone,$countries, $track]], $entity);
 
 if ($res) {
     $output = json_encode(array('type' => 'success', 'text' => "Details successfully submitted."));
