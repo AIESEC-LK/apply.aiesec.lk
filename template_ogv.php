@@ -31,6 +31,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-multiselect/0.9.13/js/bootstrap-multiselect.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-multiselect/0.9.13/css/bootstrap-multiselect.css">
     <!-- Title Page-->
     <title><?=$product_name?> Sign Up</title>
     <BASE href="<?= $base ?>">
@@ -40,6 +42,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <link href="vendor/font-awesome-4.7/css/font-awesome.min.css" rel="stylesheet" media="all">
     <!-- Font special for pages-->
     <link href="https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-multiselect/0.9.13/js/bootstrap-multiselect.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-multiselect/0.9.13/css/bootstrap-multiselect.css">
 
     <!-- Vendor CSS-->
     <link href="vendor/select2/select2.min.css" rel="stylesheet" media="all">
@@ -186,6 +193,22 @@ width:100%; height:100%; z-index:999; text-align: center; vertical-align: middle
                                 <input class="input--style-4" type="tel" placeholder="07xxxxxxxx" name="phone" pattern="[0][0-9]{9}" required>
                             </div>
                         </div>
+                        <div class="input-group col-2">
+                            <label class="label">Countries Interested In <span class="required_field"> *</span></label>
+                            <div class="rs-select2 js-select-simple select--no-search form-group">
+                                <div class="form-group">
+                                    <select id="countries" name="countries[]" multiple >
+                                        <option value="India">India</option>
+                                        <option value="Turkey">Turkey</option>
+                                        <option value="Tunisia">Tunisia</option>
+                                        <option value="Spain">Spain</option>
+                                        <option value="Germany">Germany</option>
+                                    </select>
+                                </div>
+                                <div class="select-dropdown"></div>
+                            </div>
+                        </div>
+
  
 
                     </div>
