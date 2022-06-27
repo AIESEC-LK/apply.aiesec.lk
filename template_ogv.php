@@ -193,6 +193,13 @@ width:100%; height:100%; z-index:999; text-align: center; vertical-align: middle
                                 <input class="input--style-4" type="tel" placeholder="07xxxxxxxx" name="phone" pattern="[0][0-9]{9}" required>
                             </div>
                         </div>
+                        <div class="col-2">
+                            <div class="input-group">
+                                <label class="label">University/School/Institute<span class="required_field"> *</span></label>
+                                <input class="input--style-4" type="text"  name="institute" required>
+                            </div>
+                        </div>
+                        
                         <div class="input-group col-2">
                             <label class="label">Countries Interested In <span class="required_field"> *</span></label>
                             <div class="rs-select2 js-select-simple select--no-search form-group">
