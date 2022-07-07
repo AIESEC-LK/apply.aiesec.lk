@@ -70,7 +70,7 @@ $date = new DateTime("now", new DateTimeZone('Asia/Colombo') );
 $timestamp = $date->format('Y-m-d H:i:s');
 
     $url = "Not provided";
-$res = append([[$timestamp, $first_name, $last_name, $email, $phone,$countries,$institute, $track]], $entity);
+$res = append([[$timestamp, $first_name, $last_name, $email, $phone,$institute, $track]], $entity);
 
 if ($res) {
     $output = json_encode(array('type' => 'success', 'text' => "Details successfully submitted."));
