@@ -35,6 +35,7 @@ include_once "base.php";
 
 	<!-- Font special for pages-->
 	<link href="https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
 
 	<!-- Vendor CSS-->
 	<link href="vendor/select2/select2.min.css" rel="stylesheet" media="all">
@@ -154,9 +155,9 @@ width:100%; height:100%; z-index:999; text-align: center; vertical-align: middle
 	</div>
 
 	<div class="card card-4">
-		<div class="card-body" style="border-bottom-style: solid; border-color:<?= $color ?>; border-width:20px; border-radius:5px; padding-top:40px;">
+		<div class="card-body" style="border-bottom-style: none; border-color:<?= $color ?>; border-width:00px; border-radius:5px; padding-top:40px;">
 			<center>
-				<h1 class="title" style="color:<?= $color ?>; font-size:30px; font-weight:bold"><?= $product_name_up ?> APPLICATION</h1>
+				<h1 class="title font-poppins" style="color:<?= $color ?>; font-size:30px; font-weight:bold"><?= $product_name_up ?> APPLICATION</h1>
 			</center>
 			<form id='signup_form' enctype="multipart/form-data">
 				<div class="row row-space">
@@ -242,7 +243,7 @@ width:100%; height:100%; z-index:999; text-align: center; vertical-align: middle
 
 				<div class="g-recaptcha" data-sitekey="6LfddL4UAAAAAH5VDHI75ZzDmn3M6hIAiVyOf7gz"></div>
 				<div class="p-t-15">
-					<button class="btn btn--radius-2 btn--gt" style="background: <?= $color ?>;" name="submit" type="submit">Apply
+					<button class="btn btn--radius-2 btn--gt" style="background: <?= $color ?>; font-weight:800" name="submit" type="submit">apply
 
 					</button>
 				</div>
@@ -258,15 +259,6 @@ width:100%; height:100%; z-index:999; text-align: center; vertical-align: middle
 
 	<!-- Main JS-->
 	<script src="js/global.js"></script>
-
-	<style>
-		iframe[seamless] {
-			background-color: transparent;
-			border: 0px none transparent;
-			padding: 0px;
-			overflow: hidden;
-		}
-	</style>
 
 </body>
 
@@ -360,6 +352,16 @@ width:100%; height:100%; z-index:999; text-align: center; vertical-align: middle
 		});
 
 	});
+</script>
+
+<script>
+	$(document).ready(function() {
+		parent.postMessage(document.body.scrollHeight, "*");
+	});
+
+	window.addEventListener('resize', function(event) {
+		parent.postMessage(document.body.scrollHeight, "*");
+	}, true);
 </script>
 
 
