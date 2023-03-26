@@ -12,6 +12,7 @@
      !isset($_POST['email']) ||
      !isset($_POST['phone']) ||
      !isset($_POST['countries']) ||
+     !isset(($_POST['institute'])) ||
      !isset($_POST['g-recaptcha-response'])){
      $output = json_encode(array('type' => 'fail', 'text' => "Incomplete form"));
      die($output);
@@ -38,7 +39,7 @@
  foreach($_POST['countries'] as $country){
      $countries .= $country . ',';
  }
-
+ $institute = $_POST['institute']; 
  $entity = $_POST['entity'];
  $track = $_POST['track'];
  $institute = $_POST['institute_text']; 
@@ -69,7 +70,7 @@ $date = new DateTime("now", new DateTimeZone('Asia/Colombo') );
 $timestamp = $date->format('Y-m-d H:i:s');
 
     $url = "Not provided";
-$res = append([[$timestamp, $first_name, $last_name, $email, $phone,$countries, $track]], $entity);
+$res = append([[$timestamp, $first_name, $last_name, $email, $phone,$countries,$institute, $track]], $entity);
 
 if ($res == "success") {
     $output = json_encode(array('type' => 'success', 'text' => "Details successfully submitted."));
