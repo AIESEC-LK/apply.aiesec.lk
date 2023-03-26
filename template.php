@@ -77,7 +77,7 @@ include_once "base.php";
 		<center><img src="assets/<?= $logo ?>" alt="Smiley face" class="responsive" style="width:300px;"> </center><br><br>
 		<div class="wrapper wrapper--w960">
 			<div class="card card-4">
-				<iframe id="idIframe" onload="iframeLoaded()" scrolling="no" style="width:100%; overflow:hidden" frameBorder="0" src="http://localhost/aiesec.lk/apply/talent_frame.php?product_name_up=GLOBAL%20TALENT&color=%230cb9c1&entity=CC&track=testTrack&product=oGTa">
+				<iframe id="idIframe" onload="iframeLoaded()" scrolling="no" style="width:100%; overflow:hidden" frameBorder="0" src="talent_frame.php?product_name_up=GLOBAL%20TALENT&color=%230cb9c1&entity=CC&track=testTrack&product=oGTa">
 				</iframe>
 			</div>
 
