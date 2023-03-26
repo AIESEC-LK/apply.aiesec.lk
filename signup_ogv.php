@@ -72,12 +72,10 @@ $timestamp = $date->format('Y-m-d H:i:s');
     $url = "Not provided";
 $res = append([[$timestamp, $first_name, $last_name, $email, $phone,$countries,$institute, $track]], $entity);
 
-if ($res) {
+if ($res == "success") {
     $output = json_encode(array('type' => 'success', 'text' => "Details successfully submitted."));
     die($output);
 } else{
     $output = json_encode(array('type' => 'fail', 'text' => "An unknown error occurred."));
     die($output);
 }
-
-?>

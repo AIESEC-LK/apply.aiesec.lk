@@ -85,14 +85,10 @@
 
     $res = append([[$timestamp, $product, $first_name, $last_name, $email, $phone, $institute, $education, $url, $track]], $entity);
 
-    if ($res) {
+    if ($res == "success") {
         $output = json_encode(array('type' => 'success', 'text' => "Details successfully submitted."));
         die($output);
     } else{
         $output = json_encode(array('type' => 'fail', 'text' => "An unknown error occurred."));
         die($output);
     }
-
-
-
-?>

@@ -77,21 +77,15 @@ include_once "base.php";
 		<center><img src="assets/<?= $logo ?>" alt="Smiley face" class="responsive" style="width:300px;"> </center><br><br>
 		<div class="wrapper wrapper--w960">
 			<div class="card card-4">
-				<iframe id="idIframe" onload="iframeLoaded()" scrolling="no" style="width:100%; overflow:hidden" frameBorder="0" src="talent_frame.php?product_name_up=GLOBAL%20TALENT&color=%230cb9c1&entity=CC&track=testTrack&product=oGTa">
+				<iframe id="idIframe" scrolling="no" style="width:100%; overflow:hidden" frameBorder="0" src="talent_frame.php?product_name_up=<?= urlencode($product_name_up) ?>&color=<?= urlencode($color) ?>&entity=<?= urlencode($entity) ?>&track=<?= urlencode($track) ?>&product=<?= urlencode($product) ?>">
 				</iframe>
 			</div>
 
 			<script type="text/javascript">
-				window.onresize = iframeLoaded;
-
-				function iframeLoaded() {
+				window.addEventListener('message', event => {
 					var iFrameID = document.getElementById('idIframe');
-					if (iFrameID) {
-						// here you can make the height, I delete it first, then I make it again
-						iFrameID.height = "";
-						iFrameID.height = iFrameID.contentWindow.document.body.scrollHeight + "px";
-					}
-				}
+					iFrameID.height = event.data + "px";
+				});
 			</script>
 
 		</div>
