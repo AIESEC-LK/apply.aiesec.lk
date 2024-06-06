@@ -17,7 +17,9 @@ $spreadsheetIds = [
     'Kandy' => "1T_49zxTbtnveHRtjyDoBzfbfpeHGlHDpG0-YT2Mygr8",
     'Ruhuna' => "1tFQOE9MaOCmoDKiIeSEh665NdALzyvBxvsUxpH3e4U8",
     'SLIIT' => "1LOxyUhPybwWEftugJIVnM2bOnQRzlpuj0Nr0Px7iB7A",
-    'NSBM' => "1CyPankUjC2JgvpfufyZYV00dPLX145fUEs4AWqJK6Lo"
+    'NSBM' => "1CyPankUjC2JgvpfufyZYV00dPLX145fUEs4AWqJK6Lo",
+    'NIBM' => "1c1jqqbt2iokOEz1vZPOHwyv1-1W3b5cH5i8HTyBUAhM",
+    'Rajarata' => "1tQ3gzsGut95RzdJ7pVUgMxd0ym9pYdmtBXjffTP0cMA",
 ];
 
 $spreadsheetId = "1I_AKWwt99k5NiecKtkaN94Jiz9G21yARMJKiRr7DjD0";
@@ -55,7 +57,7 @@ function append($values, $entity){
 
     //Append to entity sheet (or other)
     $result = $sheet_service->spreadsheets_values->append($spreadsheetId, $range, $body, $params);
-    if($result->getUpdates()->getUpdatedCells() == 8){
+    if($result->getUpdates()->getUpdatedCells() == 7){
         return true;
     }
 

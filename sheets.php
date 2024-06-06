@@ -18,7 +18,8 @@ $spreadsheetIds = [
 	'Ruhuna' => "1eyayItK2U7Xy2uLsCUokhVxuvtrDYUAqpOYH3Zu_m1I",
 	'SLIIT' => "1PB0BhWJ17vgKcHOybvm3GFEXGmY8AYeototr21x_59A",
 	'NSBM' => "1gIJX6jbhigc1duSh3Fc1aFaPCV04_Zf9AUWBAIjXsVo",
-	'NIBM' => "1R_1T8dbqc7chHjSjY_a8V1r1mkKlA7KzrDRGHoMn_L8"
+	'NIBM' => "1R_1T8dbqc7chHjSjY_a8V1r1mkKlA7KzrDRGHoMn_L8",
+	'Rajarata' => "1953-l-q3nJuFVp9nSCvB3Pm9AAtk0_MExHgX9J23DUU",
 ];
 
 $spreadsheetId = "18YJN97bZAyqZJZ04gd7TbyHhNm3_klvuJDG-ApMaPwQ";
